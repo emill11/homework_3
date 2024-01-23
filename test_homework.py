@@ -1,5 +1,6 @@
 import math, random
 
+
 def test_greeting():
 
     #Напишите программу, которая выводит на экран приветствие.
@@ -7,13 +8,11 @@ def test_greeting():
     name = "Анна"
     age = 25
     # TODO Сформируйте нужную строку
-    output = "Привет, " + name + "! Тебе " + str(age) + " лет."
+    output = f"Привет, {name}! Тебе {age} лет."
     print(output)
 
     # Проверяем результат
     assert output == "Привет, Анна! Тебе 25 лет."
-
-test_greeting()
 
 
 def test_rectangle():
@@ -24,7 +23,7 @@ def test_rectangle():
     a = 10
     b = 20
     # TODO сосчитайте периметр
-    perimeter = a*2 + b*2
+    perimeter = (a+b)*2
     assert perimeter == 60
 
     # TODO сосчитайте площадь
@@ -33,8 +32,6 @@ def test_rectangle():
 
     print("perimeter:", perimeter)
     print("area:", area)
-
-test_rectangle()
 
 
 def test_circle():
@@ -56,9 +53,6 @@ def test_circle():
     print("area:", area)
 
 
-test_circle()
-
-
 def test_random_list():
     """
     Создайте список из 10 случайных чисел от 1 до 100 (включая обе границы) и отсортируйте его по возрастанию.
@@ -69,7 +63,6 @@ def test_random_list():
     assert len(l) == 10
     assert all(l[i] <= l[i + 1] for i in range(len(l) - 1))
     print(l)
-test_random_list()
 
 
 def test_unique_elements():
@@ -101,4 +94,3 @@ def test_dicts():
     assert list(d.values()) == second
     print(d)
 
-test_dicts()
